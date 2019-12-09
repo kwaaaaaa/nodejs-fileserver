@@ -1,7 +1,8 @@
 # TRI File Server Challenge
 
 * By Kwa Tran
-* Developed on Ubuntu 18.04, tested on Windows 10
+* Developed on Ubuntu 18.04, tested on latest MacOS and Windows 10
+* Disclaimer: I had a lot of issues with testing on Windows. It worked with some workarounds with npm. This is a general issue I have with NodeJS projects on Windows.
 
 # Objectives
 
