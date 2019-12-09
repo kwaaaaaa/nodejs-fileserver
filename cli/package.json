@@ -7,8 +7,7 @@
     "fs-store": "./index.ts"
   },
   "scripts": {
-    "test-server": "fs-store -l && fs-store -u --path cli.js && fs-store -d --name cli.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "fs-store -l && fs-store -u --path cli.js && fs-store -d --name cli.js"
   },
   "keywords": [],
   "author": "",
