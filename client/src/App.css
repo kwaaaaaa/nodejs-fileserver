@@ -1,0 +1,33 @@
+section.app {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.listHeader {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 2em;
+}
+
+.listItem {
+  border: 1px solid rgb(136, 136, 136);
+  border-left: 2px solid rgb(77, 77, 77);
+  border-bottom: 2px solid rgb(77, 77, 77);
+}
+.activeListItem {
+  border: 1px solid rgb(155, 226, 140);
+  border-left: 2px solid rgb(0, 182, 9);
+  border-bottom: 2px solid rgb(0, 182, 9);
+  background-color: rgb(208, 255, 189);
+}
+.listText {
+  min-width: 300px;
+  text-align: left;
+}
+
+.deleteIcon {
+  margin-left: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+{
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#b1f8d7"
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.tabSize": 2
+}
