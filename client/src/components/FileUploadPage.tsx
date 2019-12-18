@@ -63,26 +63,27 @@ const FileUploadPage = () => {
       </div>
 
       <h3 className="listHeader">{ state.length } Files: </h3>
-      <List>
-        { state.map(file => {
-          return(
-            <ListItem
-              className={latestFiles.find(f => f===file) ? 'activeListItem': 'listItem'}
-              key={file}
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <FileIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={file} className='listText' />
-              <DeleteIcon color="secondary" className='deleteIcon'
-                onClick={() => {handleClickDelete(file)}}
-              />
-            </ListItem>
-          )
-        })}
-      </List>
+      { !!state.length && <List>
+          { state.map(file => {
+            return(
+              <ListItem
+                className={latestFiles.find(f => f===file) ? 'activeListItem': 'listItem'}
+                key={file}
+              >
+                <ListItemAvatar>
+                  <Avatar>
+                    <FileIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={file} className='listText' />
+                <DeleteIcon color="secondary" className='deleteIcon' data-testid="deleteIcon"
+                  onClick={() => {handleClickDelete(file)}}
+                />
+              </ListItem>
+            )
+          })}
+        </List>
+      }
 
       <Dialog
         open={open}

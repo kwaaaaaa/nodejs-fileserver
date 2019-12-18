@@ -30,8 +30,12 @@ export default class FileStorage implements IStorage {
   public deleteFile = (name: string) => {
     const deleteAsPromise = async (storagePath: string, filePath: string): Promise<IMessage> =>
       new Promise((resolve, reject) => {
-        fs.unlinkSync(filePath);
-        return resolve(new SuccessMessage('ok'));
+        try {
+          fs.unlinkSync(filePath);
+          return resolve(new SuccessMessage('ok'));
+        } catch (err) {
+          return reject(new ErrorMessage(err));
+        }
       }
     );
 

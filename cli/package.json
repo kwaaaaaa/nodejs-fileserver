@@ -7,7 +7,7 @@
     "fs-store": "./index.ts"
   },
   "scripts": {
-    "test": "fs-store -l && fs-store -u --path cli.js && fs-store -d --name cli.js"
+    "test": "jest --watchAll --verbose --coverage"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,17 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
-    "@types/request": "^2.48.3"
+    "@types/request": "^2.48.3",
+    "concat-stream": "^2.0.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

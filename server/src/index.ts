@@ -6,7 +6,7 @@ import fileUpload from 'express-fileupload';
 
 import logger from './middlewares/logger';
 import fileRouter from './routes/files';
-import homeRouter from './routes/test';
+import homeRouter from './routes/home';
 
 dotenv.config();
 const app = express();

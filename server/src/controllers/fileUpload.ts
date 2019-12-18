@@ -6,6 +6,7 @@ import SuccessMessage from '../models/SuccessMessage';
 import FileStorage from '../services/FileStorage';
 
 export default async (req: Request, res: Response) => {
+  console.log('files tring to upload', req.files);
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send(new ErrorMessage('No files were uploaded because request is of the wrong type.'));
   }
