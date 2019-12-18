@@ -29,32 +29,36 @@
 * Dependencies - Need NodeJS and NPM installed. Will need admin access to enable the CLI.
 * After cloning / copying files. Run these commands:
 ```bash
-# start server
+# install server
 cd server
 npm install
+# test installation
+npm run test
+# start server
 npm start
 # if this doesnt work (like on windows), run the app without nodemon
 npm run start2
-# start web ui on new terminal
+
+# install cli and run cli commands on new terminal
+cd cli
+npm install
+# link cli (note on windows you dont need sudo)
+sudo npm link
+# test cli commands
+fs-store --help
+fs-store --upload --path README.md
+fs-store --list
+fs-store --delete --name README.md
+# start web ui
 cd ../client
 npm install
 npm start
-# start cli
-cd ../cli
-npm install
-# note on windows you dont need sudo
-sudo npm link
-# test cli and server with test script from cli project
-npm run test
-# test cli commands
-fs-store --help
-fs-store --upload --path cli.js
-fs-store --list
-fs-store --delete --name cli.js
-# test web ui
-sensible-browser http://lcoalhost:3000
+# test web ui in browser
+sensible-browser http://localhost:3000
 # cleanup
 npm unlink
+# after this you can `npm run test` in each terminal window to run unit and integration tests
+# exit out of terminal windows
 ```
 
 # Troubleshooting
